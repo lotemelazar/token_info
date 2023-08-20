@@ -1,0 +1,95 @@
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Styling for the header */
+.top-bar {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the TOMI logo */
+.tomi-logo {
+  background-image: url("path/to/your/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+/* Styling for headings */
+h2 {
+  color: #747474 !important;
+  font-family: "Goldman" !important;
+  margin-bottom: 20px;
+}
+
+/* Styling for paragraphs */
+p {
+  /* color: #747474 !important; */
+  line-height: 1.5;
+  color: #ff0083;
+  font-family: "Goldman" !important;
+}
+
+/* Styling for spans inside paragraphs */
+p span {
+  font-weight: bold;
+  color: #747474 !important;
+}
+
+/* Styling for links */
+a {
+  color: #ff0083;
+  text-decoration: none;
+}
+
+/* Styling for links on hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Apply grid display to the content container */
+.flex-container {
+  display: flex;
+}
+
+/* Styling for the token info section */
+.token-info {
+  margin: 40px;
+  margin-top: 0%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: auto;
+}
+
+/* Style the token-info and right-page sections */
+
+.bottom-page {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the GIF image */
+.gif img {
+  max-width: 25%;
+  height: auto;
+  margin-left: 35%;
+}

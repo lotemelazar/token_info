@@ -1,0 +1,56 @@
+<!-- index.html -->
+<html>
+  <head>
+    <title>Token Information</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="tomi-logo">
+        <img
+          src="	https://res.cloudinary.com/drt6vurtt/image/upload/v1680538381/logo_yrpftq.svg"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <div class="flex-container">
+      <div class="token-info Eth">
+        <h2>ETH Overview</h2>
+        <p>
+          Number of Holders: <br /><span id="holderCount">-------------</span>
+        </p>
+        <p>
+          Total Transfers: <br /><span id="transferCount">-------------</span>
+        </p>
+        <p>Ether Price: <br /><span id="ethPrice">-------------</span></p>
+      </div>
+      <div class="token-info tomi">
+        <h2>tomi-Token Overview</h2>
+        <p>Number of Holders: <br /><span id="holderCount">10,577</span></p>
+        <p>Total Transfers: <br /><span id="transferCount">32,797</span></p>
+        <p>tomi-Token Price: <br /><span id="ethPrice">2.18 usd</span></p>
+      </div>
+    </div>
+
+    <div class="bottom-page">
+      <div class="gif">
+        <img src="icons-gif-tomi.gif" alt="" />
+      </div>
+    </div>
+  </body>
+  <script>
+    // Fetch data from the backend
+    fetch("http://localhost:3001/token-data")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("ethPrice").textContent =
+          data.ethPrice + " usd";
+        document.getElementById("holderCount").textContent = "-------------";
+        document.getElementById("totalSupply").textContent = data.totalSupply;
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  </script>
+</html>
